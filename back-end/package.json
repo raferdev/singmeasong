@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "tsc",
     "dev": "nodemon src/server.ts"
   },
   "keywords": [],
