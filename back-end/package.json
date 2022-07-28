@@ -7,7 +7,7 @@
   "scripts": {
     "start": "tsc",
     "dev": "nodem on src/server.ts",
-    "test:unit":"NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest Units/ -- --coverage -i",
+    "test:unit":"NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest Units/servicesUnits.test.ts -i -- --coverage",
     "test": "dotenv -e .env.test prisma migrate dev && NODE_OPTIONS=--experimental-vm-modules dotenv -e .env.test jest -i"
   },
   "keywords": [],
