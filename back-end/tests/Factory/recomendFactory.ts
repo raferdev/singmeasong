@@ -2,8 +2,8 @@ import { faker } from "@faker-js/faker";
 
 function video() {
     const video = {
-        name:faker.music.songName,
-        youtubeLink:"https://www.youtube.com/watch?v=ZhstyJSNKME&t=74s"
+        name:faker.music.songName(),
+        youtubeLink:`https://www.youtube.com/watch?v=${faker.random.alpha(11)}`
     }
     return video
 };

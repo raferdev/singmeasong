@@ -1,7 +1,7 @@
 import Recomends from "./recomendFactory.js"
 
 const Factory = {
-    Recomends
+    Recomends,
 };
 
 export default Factory;
