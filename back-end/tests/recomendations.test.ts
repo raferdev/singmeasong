@@ -9,12 +9,15 @@ beforeAll(async  ()=> {
 
 describe("POST RECOMENDATIONS /recommendations ", () => {
     it("User can post recomendation, expected status 200", async () => {
+      
         const video = Factory.Recomends.video();
-        const result = await supertest(app).post("/recommendations").send(video)
+
+        const result = await supertest(app).post("/recommendations").send(video);
+
         expect(result.status).toEqual(201)
     })
   });
 
-  afterAll(async () => {
+afterAll(async () => {
     await Repositories.Prisma.disconnect();
   })
