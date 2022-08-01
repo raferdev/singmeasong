@@ -1,4 +1,5 @@
 import { faker } from "@faker-js/faker";
+import axios from "axios";
 
 function createVdeo() {
   const video = {
@@ -7,8 +8,17 @@ function createVdeo() {
     return video
 }
 
+async function seed() {
+  for(let i = 0; i<10;i++) {
+    const video = Factory.Recommendations.createVdeo();
+    await axios.post('http://localhost:5000/recommendations').body(video);
+
+  }
+}
+
 const Recommendations = {
   createVdeo,
+  seed
 };
 
 export default Recommendations;
