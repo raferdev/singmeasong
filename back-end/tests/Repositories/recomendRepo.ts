@@ -12,11 +12,15 @@ async function add(video:CreateRecommendationData) {
 async function addMany(videoArr:CreateRecommendationData[]) {
     return await prisma.recommendation.createMany({data:videoArr})
 }
+async function updateAllScore(score:number) {
+    return await prisma.recommendation.updateMany({data:{score}})
+}
 
 const Recomendations = {
     clean,
     add,
-    addMany
+    addMany,
+    updateAllScore
 }
 
 export default Recomendations;
