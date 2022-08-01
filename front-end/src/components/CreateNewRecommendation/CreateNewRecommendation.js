@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -18,9 +20,9 @@ export default function CreateNewRecommendation({ onCreateNewRecommendation = ()
   
   return (
     <Container>
-      <Input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} disabled={disabled} />
-      <Input type="text" placeholder="https://youtu.be/..." value={link} onChange={e => setLink(e.target.value)} disabled={disabled} />
-      <Button onClick={() => handleCreateRecommendation()} disabled={disabled}>
+      <Input id="create_name" type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} disabled={disabled} />
+      <Input id="create_link" type="text" placeholder="https://youtu.be/..." value={link} onChange={e => setLink(e.target.value)} disabled={disabled} />
+      <Button id="create_button" onClick={() => handleCreateRecommendation()} disabled={disabled}>
         <IoReturnUpForwardOutline size="24px" color="#fff" />
       </Button>
     </Container>
